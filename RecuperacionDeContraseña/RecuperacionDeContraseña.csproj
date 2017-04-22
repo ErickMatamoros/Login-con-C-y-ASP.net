@@ -43,6 +43,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -67,6 +95,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="View\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="View\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="View\font-awesome\FontAwesome.otf" />
+    <Content Include="View\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="View\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="View\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="View\font-awesome\font\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,10 +114,116 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="View\Ajax.aspx" />
+    <Content Include="View\css\bootstrap-responsive.min.css" />
+    <Content Include="View\css\bootstrap-wysihtml5.css" />
+    <Content Include="View\css\bootstrap.min.css" />
+    <Content Include="View\css\colorpicker.css" />
+    <Content Include="View\css\datepicker.css" />
+    <Content Include="View\css\font-awesome.css" />
+    <Content Include="View\css\fullcalendar.css" />
+    <Content Include="View\css\jquery.easy-pie-chart.css" />
+    <Content Include="View\css\jquery.gritter.css" />
+    <Content Include="View\css\matrix-login.css" />
+    <Content Include="View\css\matrix-media.css" />
+    <Content Include="View\css\matrix-style.css" />
+    <Content Include="View\css\select2.css" />
+    <Content Include="View\css\uniform.css" />
+    <Content Include="View\font-awesome\css\font-awesome.css" />
+    <Content Include="View\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="View\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="View\img\breadcrumb.png" />
+    <Content Include="View\img\demo\av1.jpg" />
+    <Content Include="View\img\demo\av2.jpg" />
+    <Content Include="View\img\demo\av3.jpg" />
+    <Content Include="View\img\demo\av4.jpg" />
+    <Content Include="View\img\demo\av5.jpg" />
+    <Content Include="View\img\demo\demo-image1.jpg" />
+    <Content Include="View\img\demo\demo-image2.jpg" />
+    <Content Include="View\img\demo\demo-image3.jpg" />
+    <Content Include="View\img\demo\envelope.png" />
+    <Content Include="View\img\gallery\imgbox1.jpg" />
+    <Content Include="View\img\gallery\imgbox2.jpg" />
+    <Content Include="View\img\gallery\imgbox3.jpg" />
+    <Content Include="View\img\gallery\imgbox4.jpg" />
+    <Content Include="View\img\gallery\imgbox5.jpg" />
+    <Content Include="View\img\glyphicons-halflings-white.png" />
+    <Content Include="View\img\gritter.png" />
+    <Content Include="View\img\hue.png" />
+    <Content Include="View\img\icons\16\book.png" />
+    <Content Include="View\img\icons\16\cabinet.png" />
+    <Content Include="View\img\icons\16\calendar.png" />
+    <Content Include="View\img\icons\16\client.png" />
+    <Content Include="View\img\icons\16\database.png" />
+    <Content Include="View\img\icons\16\download.png" />
+    <Content Include="View\img\icons\16\graph.png" />
+    <Content Include="View\img\icons\16\home.png" />
+    <Content Include="View\img\icons\16\lock.png" />
+    <Content Include="View\img\icons\16\mail.png" />
+    <Content Include="View\img\icons\16\pdf.png" />
+    <Content Include="View\img\icons\16\people.png" />
+    <Content Include="View\img\icons\16\piechart.png" />
+    <Content Include="View\img\icons\16\search.png" />
+    <Content Include="View\img\icons\16\shopping-bag.png" />
+    <Content Include="View\img\icons\16\survey.png" />
+    <Content Include="View\img\icons\16\tag.png" />
+    <Content Include="View\img\icons\16\user.png" />
+    <Content Include="View\img\icons\16\wallet.png" />
+    <Content Include="View\img\icons\16\web.png" />
+    <Content Include="View\img\icons\32\book.png" />
+    <Content Include="View\img\icons\32\cabinet.png" />
+    <Content Include="View\img\icons\32\calendar.png" />
+    <Content Include="View\img\icons\32\client.png" />
+    <Content Include="View\img\icons\32\dashboard.png" />
+    <Content Include="View\img\icons\32\database.png" />
+    <Content Include="View\img\icons\32\download.png" />
+    <Content Include="View\img\icons\32\graph.png" />
+    <Content Include="View\img\icons\32\home.png" />
+    <Content Include="View\img\icons\32\lock.png" />
+    <Content Include="View\img\icons\32\mail.png" />
+    <Content Include="View\img\icons\32\pdf.png" />
+    <Content Include="View\img\icons\32\people.png" />
+    <Content Include="View\img\icons\32\piechart.png" />
+    <Content Include="View\img\icons\32\search.png" />
+    <Content Include="View\img\icons\32\shopping-bag.png" />
+    <Content Include="View\img\icons\32\survey.png" />
+    <Content Include="View\img\icons\32\tag.png" />
+    <Content Include="View\img\icons\32\user.png" />
+    <Content Include="View\img\icons\32\wallet.png" />
+    <Content Include="View\img\icons\32\web.png" />
+    <Content Include="View\img\larrow.png" />
+    <Content Include="View\img\line.png" />
+    <Content Include="View\img\logo.png" />
+    <Content Include="View\img\menu-active.png" />
+    <Content Include="View\img\rarrow.png" />
+    <Content Include="View\img\saturation.png" />
+    <Content Include="View\img\select2.png" />
+    <Content Include="View\img\spinner.gif" />
+    <Content Include="View\img\sprite.png" />
+    <Content Include="View\js\jquery-1.3.2.min.js" />
+    <Content Include="View\js\jquery.min.js" />
+    <Content Include="View\js\matrix.login.js" />
+    <Content Include="View\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\User.cs" />
+    <Compile Include="Model\LoginVerify.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Ajax.aspx.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Ajax.aspx.designer.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
